@@ -1,14 +1,17 @@
+
 #include<stdio.h>
 #include<math.h>
 int main()
 {
-    int n,m;
-    float i;
+    int n,sq;
     scanf("%d",&n);
-    i=sqrt(n);
-    m=i;
-    if(i==m)
-     printf("True");
+    sq=sqrt(n);
+    if(n==sq*sq)
+    {
+        printf("True");
+    }
     else
-     printf("False");
+    {
+        printf("False");
+    }
 }
