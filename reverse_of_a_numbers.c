@@ -1,15 +1,13 @@
-//Reverse of numbers:
 #include<stdio.h>
 int main()
 {
-    int rev=0,n,rem;
+    int n,rev=0,d;
     scanf("%d",&n);
-    while(n>0)
+    while(n!=0)
     {
-      rem=n%10;
-      rev=rev*10+rem;
-      n=n/10;
+        d=n%10;
+        n=n/10;
+        rev=rev*10+d;
     }
     printf("%d",rev);
-    return 0;
 }
