@@ -2,19 +2,29 @@
 #include<math.h>
 int main()
 {
-    int n,r,d,m,sum=0;
+    int n,rev=0,d,s,dc=0,res=0,temp;
     scanf("%d",&n);
-    m=n;
-    d=(int)log10(n)+1;
-    while(n>0)
+    temp=n;
+    while(n!=0)
     {
-        r=n%10;
-        sum=sum+ceil(pow(r,d));
+        d=n%10;
         n=n/10;
-        d--;
+        rev=rev*10+d;
     }
-    if(sum==m)
-    printf("True");
-    else
-    printf("False");
-}
+    while(rev!=0)
+    {
+        s=rev%10;
+        rev=rev/10;
+        dc++;
+        res=res+pow(s,dc);
+    }
+        
+            if(temp==res)
+            {
+                printf("True");
+            }
+            else
+            {
+                printf("False");
+            }
+        }
