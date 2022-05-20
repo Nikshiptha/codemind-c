@@ -1,30 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int a=0,b=1,c,n,i,arr[100],count=0;
+    int a,b,c,n,i;
     scanf("%d",&n);
-    for(i=0;i<100;i++)
+    a=0;
+    b=1;
+    c=0;
+    while(c<n)
     {
-        arr[i]=a;
-        c=a+b;
         a=b;
         b=c;
+        c=a+b;
     }
-    for(i=0;i<100;i++)
-    {
-        if(n==arr[i])
-        {
-            count=1;
-            break;
-        }
-    }
-    if(count==1)
+    if(c==n)
     {
         printf("True");
-}
-else
-{
-    printf("False");
-}
-return 0;
+    }
+    else
+    {
+        printf("False");
+    }
 }
